@@ -37,7 +37,7 @@ async function cadastroUsuario(){
             alert(respostaApi.data.errors.cpf_cnpj[0]);
         }
         if(respostaApi.data.errors.email){
-            alert('Esse E-mail já cadastrado.')
+            alert('Esse E-mail já possui cadastro.')
             return
         }
         if(respostaApi.data.errors.password){
