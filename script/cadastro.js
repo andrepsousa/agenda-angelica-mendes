@@ -2,12 +2,12 @@ const url = 'https://api-go-wash-efc9c9582687.herokuapp.com/api/user';
 
 async function cadastroUsuario(){   
 
-    var name = document.getElementById('fullname');
-    var email = document.getElementById('email');
-    var cpf_cnpj = document.getElementById('cpf_cnpj');
-    var password = document.getElementById('password');
-    var date = document.getElementById('date');
-    if(name.value=='' || email.value == '' || cpf_cnpj.value == '' || password.value == '' || date.value == ''){
+    var name = document.getElementById('fullname').value;
+    var email = document.getElementById('email').value;
+    var cpf_cnpj = document.getElementById('cpf_cnpj').value;
+    var password = document.getElementById('password').value;
+    var date = document.getElementById('date').value;
+    if(name=='' || email == '' || cpf_cnpj == '' || password == '' || date == ''){
         alert('Preencha todos os campos');
         return
     }
@@ -16,13 +16,13 @@ async function cadastroUsuario(){
         method:"POST",
         body:JSON.stringify(
             {
-                "name":name.value,
-                "email":email.value,
+                "name":name,
+                "email":email,
                 "user_type_id":1,
-                "password": password.value,
-                "cpf_cnpj": cpf_cnpj.value,
+                "password": password,
+                "cpf_cnpj": cpf_cnpj,
                 "terms": 1,
-                "birthday": date.value    
+                "birthday": date,    
             }
         ),
         headers:{
