@@ -37,11 +37,11 @@ async function cadastroUsuario(){
             alert(respostaApi.data.errors.cpf_cnpj[0]);
         }
         if(respostaApi.data.errors.email){
-            alert('Esse E-mail já cadastrado.')
+            alert('Este E-mail já possui cadastro.')
             return
         }
         if(respostaApi.data.errors.password){
-            alert('A senha deve ter pelo menos 6 caracteres.')
+            alert('A senha deve conter pelo menos 6 caracteres.')
             return
         }
         if(respostaApi.data.errors.name){
