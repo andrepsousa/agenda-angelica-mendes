@@ -27,7 +27,7 @@ async function cadastroUsuario(){
                 "password": password,
                 "cpf_cnpj": cpf_cnpj,
                 "terms": 1,
-                "birthday": date    
+                "birthday": date
             }
         ),
         headers:{
