@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&display=swap');
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -28,7 +28,7 @@ header {
   padding: 40px 4%;
 }
 
-header > .interface{
+header>.interface {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -40,16 +40,16 @@ header a {
   font-family: "Alkatra", sans-serif;
 }
 
-header nav ul{
+header nav ul {
   list-style-type: none;
 }
 
-header nav ul li{
+header nav.menu-desktop ul li {
   display: inline-block;
   padding: 0 40px;
 }
 
-.btn button{
+.btn button {
   padding: 10px 40px;
   font-size: 18px;
   font-weight: 700;
@@ -63,6 +63,65 @@ header nav ul li{
   margin: 5px;
 }
 
+.btn-abrir-menu i{
+  color: #fff;
+  font-size: 70px;
+}
+.menu-mobile {
+  background-color: #b57edc;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 99999;
+  width: 0%;
+  overflow: hidden;
+  transition: .3s;
+}
+
+.menu-mobile.abrir-menu{
+  width: 70%;
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu{
+  display: block;
+}
+.menu-mobile .btn-fechar {
+  padding: 20px 5%;
+}
+
+.menu-mobile .btn-fechar i{
+  color: #fff;
+  font-size: 40px;
+}
+
+.menu-mobile nav ul {
+  text-align: right;
+}
+
+.menu-mobile nav ul li a {
+  color: #000;
+  font-size: 20px;
+  font-weight: 300;
+  padding: 13px 8%;
+  display: block;
+}
+
+.menu-mobile nav ul li a:hover {
+  background-color: #fff;
+  color: #000000;
+}
+
+.overlay-menu{
+  background-color:#b57edc6c;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 88888;
+  display: none;
+}
 section .topo-do-site {
   padding: 40px 4%;
 }
@@ -92,17 +151,18 @@ section .topo-do-site .flex {
   color: #4b1c71;
 }
 
-.topo-do-site .img-topo-site img{
+.topo-do-site .img-topo-site img {
   position: relative;
   animation: flutuar 2s ease-in-out infinite alternate;
   border-radius: 10px;
 }
 
 @keyframes flutuar {
-  0%{
+  0% {
     top: 0;
   }
-  100%{
+
+  100% {
     top: 30px;
   }
 }
@@ -115,16 +175,16 @@ section.especialidades .flex {
   gap: 60px;
 }
 
-h2.titulo{
+h2.titulo {
   color: white;
   font-size: 38px;
   font-family: "alkatra", sans-serif;
   text-align: center;
 }
 
-h2.titulo span{
-    color: #4b1c71;
-  }
+h2.titulo span {
+  color: #4b1c71;
+}
 
 .especialidades .especialidades-box {
   color: white;
@@ -139,7 +199,7 @@ h2.titulo span{
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.555);
 }
 
-.especialidades .especialidades-box i{
+.especialidades .especialidades-box i {
   font-size: 70px;
   color: #4b1c71;
 }
@@ -155,25 +215,25 @@ h2.titulo span{
   line-height: 20px;
 }
 
-section.sobre{
+section.sobre {
   padding: 80px 4%;
 }
 
-section.sobre .flex{
+section.sobre .flex {
   align-items: center;
   gap: 60px;
 }
 
-.sobre .img-sobre img{
+.sobre .img-sobre img {
   border-radius: 20px;
 }
 
-.sobre .txt-sobre{
+.sobre .txt-sobre {
   color: white;
   font-family: "Alkatra", sans-serif;
 }
 
-.sobre .txt-sobre h2{
+.sobre .txt-sobre h2 {
   font-size: 40px;
   line-height: 40px;
   margin-bottom: 30px;
@@ -184,12 +244,12 @@ section.sobre .flex{
   display: block;
 }
 
-.sobre .txt-sobre p{
+.sobre .txt-sobre p {
   margin: 20px 0;
   text-align: justify;
 }
 
-.btn-social button{
+.btn-social button {
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -207,13 +267,13 @@ section.trabalhos {
   box-shadow: 0 0 40px rgba(255, 255, 255, 0.418);
 }
 
-section.trabalhos .flex{
+section.trabalhos .flex {
   align-items: center;
   justify-content: center;
   padding: 15px;
 }
 
-.trabalhos .img-trab img{
+.trabalhos .img-trab img {
   border-radius: 20px;
   margin: 8px;
 }
@@ -227,24 +287,115 @@ footer {
   box-shadow: 0 0 40px rgba(255, 255, 255, 0.418);
 }
 
-footer .flex{
+footer .flex {
   justify-content: space-between;
 }
 
-footer .line-footer{
+footer .line-footer {
   padding: 20px 0;
 }
 
-footer .line-footer p i{
+footer .line-footer p i {
   color: #4b1c71;
   font-size: 22px;
 }
 
-footer .line-footer p a{
+footer .line-footer p a {
   color: #4b1c71;
   font-family: "Alkatra", sans-serif;
 }
 
 .borda {
   border-top: 2px solid #4b1c71;
+}
+
+@media screen and (max-width: 1110px) {
+
+  /*classes gerais*/
+  .flex {
+    flex-direction: column;
+  }
+
+  h2.titulo {
+    font-size: 35px;
+    line-height: 35px;
+  }
+
+
+  /* escondendo botões*/
+  .menu-desktop,
+  .btn {
+    display: none;
+
+  }
+
+  /*topo do site*/
+  section .topo-do-site .flex {
+    gap: 10px;
+  }
+
+  section .topo-do-site {
+    padding: 20px 5%;
+  }
+
+  .topo-do-site h1 {
+    font-size: 30px;
+  }
+
+  .img-topo-site img {
+    width: 100%;
+  }
+
+  /*especialidades*/
+  section.especialidades {
+    padding: 40px 8%;
+  }
+
+  /*sobre*/
+  section.sobre .flex {
+    flex-direction: column-reverse;
+  }
+
+  section.sobre {
+    padding: 80px 8%;
+  }
+
+  .sobre .txt-sobre h2 {
+    font-size: 38px;
+    line-height: 35px;
+    text-align: center;
+  }
+
+  .btn-social {
+    text-align: center;
+  }
+
+  .img-sobre img {
+    width: 100%;
+  }
+
+  /*trabalhos*/
+  section.trabalhos {
+    padding: 80px 8%;
+  }
+
+  .trabalhos .img-trab img {
+    width: 100%;
+    max-width: 360%;
+    margin: 0 auto;
+  }
+
+  section.trabalhos .flex {
+    gap: 60px;
+  }
+
+  footer .flex {
+    gap: 25px;
+  }
+
+  footer .line-footer {
+    text-align: center;
+  }
+
+
 }
