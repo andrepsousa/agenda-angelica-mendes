@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&display=swap');
+
+body {
+    margin: 0;
+    font-family: "Alkatra", sans-serif;
+}
+
+box * {
+    box-sizing: border-box;
+}
+
+.main-login {
+    width: 100vw;
+    height: 100vh;
+    background: #4b1c71;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.esq-login {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.esq-login > h1 {
+    color: white;
+    font-size: 3vw;
+    line-height: 50px;
+}
+
+.img-login{
+    width: 35vw;
+}
+
+.dir-login {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-login {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px black;
+}
+
+.card-login > h1 {
+    color: #4b1c71;
+    font-weight: 700;
+    margin: 0;
+}
+
+.input-login {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.input-login > input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #4b1c71;
+    color: white;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px black;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.input-login > label {
+    color: #4b1c71;
+    margin-bottom: 10px;
+}
+
+.input-login > input::placeholder {
+    color: white;
+}
+
+.btn-login > a{
+    text-decoration: none;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #4b1c71;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px black;
+    font-family: "Alkatra", sans-serif;
+}
+
+@media only screen and (max-width: 950px){
+    .card-login{
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .main-login{
+        flex-direction: column;
+    }
+
+    .esq-login > h1 {
+        display: none;
+    }
+
+    .esq-login{
+        width: 100%;
+        height: auto;
+    }
+
+    .img-login{
+        width: 50vw;
+    }
+
+    .dir-login{
+        width: 100%;
+        height: auto;
+    }
+
+    .card-login{
+        width: 90%;
+    }
+}
