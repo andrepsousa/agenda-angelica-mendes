@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
+    <script src="../script/login.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/login.css">
     <title>Login</title>
 </head>
+
 <body>
     <div class="main-login">
         <div class="esq-login">
@@ -18,18 +21,22 @@
                 <h1>LOGIN</h1>
 
                 <div class="input-login">
-                    <label for="usuario">Usuário</label>
-                    <input type="text" name="usuario" placeholder="Digite seu usuário">
+                    <label for="email">email</label>
+                    <input type="text" id="email" name="email" placeholder="Digite seu email">
                 </div>
 
                 <div class="input-login">
                     <label for="senha">Senha</label>
-                    <input type="password" name="senha" placeholder="Digite sua senha">
+                    <input type="password" id="senha" name="senha" placeholder="Digite sua senha">
                 </div>
 
-                <button class="btn-login"><a href="../index.html">Entrar</a></button>
+                <button class="btn-login" onclick="login()">Entrar</button>
+
+
+
             </div>
         </div>
     </div>
 </body>
+
 </html>
