@@ -19,5 +19,7 @@ async function login(){
 
     let responseApi = await response.json();
 
+    localStorage.setItem('user', JSON.stringify(responseApi))
+    
     console.log(responseApi);
 }
