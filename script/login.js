@@ -13,7 +13,7 @@ async function login(){
 
         }),
         headers:{
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
         }
     });
 
@@ -21,5 +21,5 @@ async function login(){
 
     localStorage.setItem('user', JSON.stringify(responseApi))
     
-    console.log(responseApi);
+    window.location.href="home.html"
 }

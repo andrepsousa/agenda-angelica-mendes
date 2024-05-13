@@ -83,7 +83,7 @@ function validarEmail(email) {
 
     if(respostaApi.data.statusCode == 422){
         if(respostaApi.data.errors.cpf_cnpj){
-            alert(respostaApi.data.errors.cpf_cnpj[0]);
+            alert('CPF já cadastrado. Por favor, insira um CPF válido.');
         }
         if(respostaApi.data.errors.email){
             alert('Este E-mail já possui cadastro.')

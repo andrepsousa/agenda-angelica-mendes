@@ -1,19 +1,20 @@
-let url = "https://api-go-wash-efc9c9582687.herokuapp.com/api/auth/address"
-async function endereço(){
+let url = "https://go-wash-api.onrender.com/api/auth/address"
+async function endereco(){
 
-    let token = JSON.parse(localStorage.getItem('user')).access_token
+    let user = localStorage.getItem('user');
+    let token = JSON.parse(user).access_token;
 
    
-    let responseApi = await fetch(url, {
+    let resposta = await fetch(url, {
         method: "GET",
         headers:{
             "Authorization": "Bearer "+token
         }
     })
     
-    let response = await responseApi.json();
-    console.log(response)
+    let responseApi = await resposta.json();
+    console.log(responseApi)
 
 }
 
-endereço();
+endereco();
