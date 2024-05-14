@@ -1,4 +1,4 @@
-async function salvarEndereco(){
+async function salvarEndereco() {
     const url= "https://go-wash-api.onrender.com/api/auth/address";
 
     let titulo = document.getElementById("titulo").value;
@@ -8,9 +8,7 @@ async function salvarEndereco(){
 
     let user = localStorage.getItem('user');
     let token = JSON.parse(user).access_token;
-    console.log(token);
 
-    
     let apiEndereco = await fetch(url, {
         method: "POST",
         body: JSON.stringify({
@@ -23,9 +21,38 @@ async function salvarEndereco(){
             'Content-Type': 'application/json',
             "Authorization": "Bearer "+token
         }
-    })
+    });
 
     let response = await apiEndereco.json();
-    window.location.href="home.html"
-
+    if (apiEndereco.ok) {
+        exibirEnderecosSalvos(); 
+        window.location.href = "home.html";
+    } else {
+        console.error("Erro ao salvar o endereço:", response);
+    }
 }
+
+async function exibirEnderecosSalvos() {
+    const url = "https://go-wash-api.onrender.com/api/auth/address";
+    
+    let user = localStorage.getItem('user');
+    let token = JSON.parse(user).access_token;
+
+    let apiEnderecos = await fetch(url, {
+        method: "GET",
+        headers: {
+            "Authorization": "Bearer " + token
+        }
+    });
+
+    let response = await apiEnderecos.json();
+    if (apiEnderecos.ok) {
+        let listaEnderecos = document.getElementById("lista-enderecos");
+        listaEnderecos.innerHTML = "";
+        response.data.forEach(endereco => {
+            let enderecoItem = document.createElement("p");
+            enderecoItem.textContent = `${endereco.title}: ${endereco.address}, ${endereco.number}, CEP: ${endereco.cep}`;
+            listaEnderecos.appendChild(enderecoItem);
+        });
+
+}}

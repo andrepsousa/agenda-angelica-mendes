@@ -5,9 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CADASTRO DE ENDEREÇO</title>
     <script src="../script/home.js"></script>
+    <script src="../script/enderco.js"></script>
 </head>
 <body>
-    <a href="./endereco.html">Cadastre seu endreço</a>
-    <h1>Listagem de endreço</h1>
+    <a href="./endereco.html">Cadastre seu endereço</a>
+    <h1>Listagem de endereço</h1>
+    <div id="lista-enderecos"></div>
+    <script>
+        window.addEventListener('load', function() {
+            exibirEnderecosSalvos();
+        });
+    </script>
 </body>
 </html>
