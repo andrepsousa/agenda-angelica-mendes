@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Alkatra', sans-serif;
+    background-color: #c78ff1;
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 50px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"] {
+    width: 30%;
+    padding: 5px;
+    border-radius: 20px;
+    border: 3px solid #8435ac;
+}
+
+input[type="button"] {
+    padding: 7px 20px;
+    background-color: #a6e9a8;
+    color: rgb(35, 63, 41);
+    border-radius: 20px;
+    cursor: pointer;
+    border: 2px solid #102f13;
+}
+
+input[type="button"]:hover {
+    background-color: #275f29;
+}
