@@ -6,11 +6,21 @@
     <title>CADASTRO DE ENDEREÇO</title>
     <script src="../script/home.js"></script>
     <script src="../script/enderco.js"></script>
+    <link rel='stylesheet' type='text/css'  href='../css/home.css'>
 </head>
 <body>
-    <a href="./endereco.html">Cadastre seu endereço</a>
+    <div class="cadastre"><a href="./endereco.html"><h3>Cadastre seu endereço</a></h3>
+    </div>
     <h1>Listagem de endereço</h1>
-    <div id="lista-enderecos"></div>
+    <div class="container" id="lista-enderecos"></div>
+    <div class="flex-container">
+    <div class="left">
+            <img src="../img/undraw_woman_ffrd (1).svg">
+        </div>
+        <div  class="right">
+            <img src="../img/Design sem nome (8).png" alt="foto angelica mendes">
+        </div>
+        </div>
     <script>
         window.addEventListener('load', function() {
             exibirEnderecosSalvos();

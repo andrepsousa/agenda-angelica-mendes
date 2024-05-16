@@ -36,6 +36,7 @@ async function login() {
         let responseApi = await response.json();
         localStorage.setItem('user', JSON.stringify(responseApi));
         console.log(responseApi);
+        alert("Login Realizado")
         window.location.href = "home.html";
     }
 }
