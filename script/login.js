@@ -28,7 +28,7 @@ async function login() {
 
     if (response.status === 422) {
         let responseData = await response.json();
-        alert(responseData.message);
+        alert("Preencha todos os campos.");
         return;
     }
 
