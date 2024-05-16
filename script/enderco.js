@@ -23,6 +23,11 @@ async function salvarEndereco() {
         }
     });
 
+    if (apiEndereco.status === 500) { 
+        alert("Endereço Inválido.");
+        return;
+    }
+
     let response = await apiEndereco.json();
     if (apiEndereco.ok) {
         exibirEnderecosSalvos(); 
