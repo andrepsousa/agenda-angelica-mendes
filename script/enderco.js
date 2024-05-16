@@ -28,6 +28,11 @@ async function salvarEndereco() {
         return;
     }
 
+     if (apiEndereco.status === 422) { 
+        alert("Preencha todos os campos.");
+        return;
+    }
+
     let response = await apiEndereco.json();
     if (apiEndereco.ok) {
         exibirEnderecosSalvos(); 
